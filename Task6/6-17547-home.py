@@ -21,11 +21,12 @@ for i in range(4):
     rt(90)
     fd(77* m)
     rt(90)
+up()
 
-for x in range(-100,100):
-    for y in range(-100,100):
+for x in range(-90,10):
+    for y in range(-12,80):
         goto(x * m, y * m)
-        dot(4,"red")
+        dot(3,"red")
 
 update()
 done()
