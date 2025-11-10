@@ -47,3 +47,17 @@ print(test[-2:])
 # строка без последних двух символов
 print(test[:-2])
 
+# сумма цифр числа
+# двоичное число
+num_1 = '1010'
+print(num_1.count('1'))
+
+# системы до 10 включительно
+num_2 = '259'
+print(sum(map(int, num_2)))
+
+# системы до 36 включительно
+num_3 = 'AF5'
+print(sum(map(lambda x: int(x, 36), num_3)))
+
+print(*map(lambda x: x + 1, [9,10,7]))
