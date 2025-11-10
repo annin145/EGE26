@@ -35,3 +35,15 @@ def convert2(num, sys):
         res += printable[num % sys]
         num //= sys
     return res[::-1]
+
+# срезы
+test = 'Hello,world!'
+#  извлечение первых двух символов
+print(test[:2])
+# строка без первых двух символов
+print(test[2:])
+# извлечение последних двух символов
+print(test[-2:])
+# строка без последних двух символов
+print(test[:-2])
+
