@@ -1,9 +1,19 @@
-from string import printable
+# from string import printable
+#
+# for p in printable[:36]:
+#     num1 = int(f'17496', p)
+#     num2 = int(f'91f83', p)
+#     num3 = int(f'd9543', p)
+#     num = num1 + num2 + num3
+#     if num % 12 == 0:
+#         print(p, num // 12)
 
-for p in printable[:37]:
-    num1 = int(f'17496', p)
-    num2 = int(f'91f83', p)
-    num3 = int(f'd9543', p)
+for p in range(16,37):
+    num1 = int('17496', p)
+    num2 = int('91f83', p)
+    num3 = int('d9543', p)
     num = num1 + num2 + num3
     if num % 12 == 0:
-        print(p, num // 12)
+        print(p,num // 12)
+
+#318836
