@@ -19,6 +19,7 @@ for N in range(1,100_000):
         r.replace(r , '1')
         n = R[3:4]
         n.replace(n, '0')
+        #R = R[:1] + r + n + R[3:]
     R = int(R,4)
     if R == 335:
         print(N)
