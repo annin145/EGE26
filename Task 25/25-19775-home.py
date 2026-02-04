@@ -12,13 +12,13 @@ def f(num):
             if is_prime(i):
                 d |= {i}
             if is_prime(num//i):
-                d |= {num % i}
+                d |= {num // i}
 
 
     s = 0
     for i in d:
         s += i
-    if s % 145 == 0:
+    if s % 145 == 0 and s != 0:
         return s
     return 0
 
