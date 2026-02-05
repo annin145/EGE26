@@ -37,3 +37,41 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
+
+######################################################################
+
+# Разложение числа на простые множители
+def fact(num):
+    d = []
+    while num % 2 == 0:
+        d += [2]
+        num //= 2
+
+    for i in range(3, int(num ** .5) + 1, 2):
+        while num % i == 0:
+            d += [i]
+            num //= i
+
+    if num > 2:
+        d += [num]
+
+    return d
+
+# Разложение числа на простые множители (чуть быстрее)
+def fact_3(num):
+    d = []
+    while num % 2 == 0:
+        d += [2]
+        num //= 2
+
+    i = 3
+    while i < int(num ** .5) + 1:
+        while num % i == 0:
+            d += [i]
+            num //= i
+        i += 2
+
+    if num > 2:
+        d += [num]
+
+    return d
