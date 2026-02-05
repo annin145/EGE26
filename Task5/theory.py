@@ -22,7 +22,7 @@ def convert(num, sys):
     while num != 0:
         res += str(num % sys)
         num //= sys
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 print(convert(25,8))
 
@@ -34,7 +34,7 @@ def convert2(num, sys):
     while num != 0:
         res += printable[num % sys]
         num //= sys
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 # срезы
 test = 'Hello,world!'
