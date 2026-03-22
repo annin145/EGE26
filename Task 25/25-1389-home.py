@@ -20,7 +20,7 @@ def f(num):
     return 0
 
 cnt = 0
-for n in range(25_001,10**30):
+for n in range(25_0001,10**30):
     if F := f(n):
         cnt += 1
         print(n,F)
