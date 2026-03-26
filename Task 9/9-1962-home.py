@@ -7,3 +7,5 @@ for a,b,c  in data:
         cnt += 1
 print(cnt)
 
+
+
