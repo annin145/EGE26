@@ -8,7 +8,7 @@ def center(cluster):
     return min(res)[1]
 
 
-with open(r'.\files\27B.txt') as file:
+with open(r'files/27B.txt') as file:
     dots = [list(map(float,i.replace(',', '.').split())) for i in file]
 
 cluster1 = [dot for dot in dots if dot[0]<0]

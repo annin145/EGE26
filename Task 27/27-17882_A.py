@@ -9,7 +9,7 @@ def center(cluster):
     return min(res)[1]
 
 
-with open(r'.\files\27_A_17882.txt') as file:
+with open(r'files/27_A_17882.txt') as file:
     dots = [list(map(float, i.split())) for i in file]
 
 cluster1 = [dot for dot in dots if dot[1] > 3]
