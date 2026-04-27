@@ -58,8 +58,7 @@ while dots:
             if dist(dot,d) < eps:
                 cluster.append(d)
                 dots.remove(d)
-    if len(cluster) > 30:
-        clusters.append(cluster)
+    clusters.append(cluster)
 
 centers = [center(cluster) for cluster in clusters]
 print([len(cluster) for cluster in clusters])
@@ -68,7 +67,7 @@ print(centers)
 cnt = 0
 m_center = centers[1]
 for i in clusters[1]:
-    if dist(i,m_center) < 1.8:
+    if dist(i,m_center) < 0.9:
         cnt += 1
 
 print(cnt)
