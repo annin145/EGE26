@@ -2,14 +2,12 @@ with open(r'..\file\24_7600.txt') as file:
     data = file.readline()
 
 ans = 0
+cnt = 1
 for i in range(len(data)-1):
-    if data[i] not in 'QRS' and data[i+1] not in 'QRS':
+    if data[i] not in 'QRS' or data[i+1] not in 'QRS':
+        cnt += 1
+    else:
         cnt = 1
-        for j in range(i+2,len(data)-1,2):
-            if data[i] not in 'QRS' and data[i+1] not in 'QRS':
-                cnt += 1
-            else:
-                break
-        ans = max(ans,cnt)
+    ans = max(ans,cnt)
 
 print(ans)
