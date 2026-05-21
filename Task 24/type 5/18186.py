@@ -2,7 +2,8 @@ from re import finditer
 with open(r'../file/24_18186.txt') as file:
     data = file.readline()
 
-# pattern = r'([BCDFGH][BCDFGH][AE])+'
+# pattern = r'([BCDFGH][BCDFGH][AE])+' # неверно
+
 # matches = [match.group() for match in finditer(pattern,data)]
 # print(max(matches,key=len))
 # print(len(max(matches, key=len)))
@@ -26,15 +27,22 @@ with open(r'../file/24_18186.txt') as file:
 #
 # print(cnt)
 ###############################################
-cnt = 0
-sogl = 'BCDFGH'
-vovel = 'AE'
-for i in range(len(data)-3):
-    if data[i] in sogl and data[i+1] in sogl and data[i+2] in vovel:
-        i += 3
-        cnt +=3
-    else:
-        i += 1
+# cnt = 0
+# sogl = 'BCDFGH'
+# vovel = 'AE'
+# for i in range(len(data)-3):
+#     if data[i] in sogl and data[i+1] in sogl and data[i+2] in vovel:
+#         i += 3
+#         cnt +=3
+#     else:
+#         i += 1
+#
+# print(cnt)
+#########################################
 
-print(cnt)
+S = r'[BCDFGH]'
+G = r'[AE]'
+pattern = rf'(?<={S}{S}{G}).*?(?={S}{S}{G})'
 
+matches = [match.group() for match in finditer(pattern, data)]
+print(len(max(matches, key=len))+6)
