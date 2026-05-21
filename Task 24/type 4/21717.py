@@ -1,4 +1,4 @@
-with open(r'..\file\24_21717.txt') as file:
+with open(r'../file/24_21717.txt') as file:
     data = file.readline()
 
 data = data.replace('RSQ', 'Rsq rsQ')
