@@ -3,6 +3,10 @@ with open(r'..\files\26_4629.txt') as file:
     costs = [int(i) for i in file]
 
 costs = sorted(costs, reverse=True)
-price1 =sum(costs) - sum(costs[3::4]) //2
+cost = sorted(costs)
+price1 = sum(costs) - sum(cost[:N //4]) //2
+price2 = sum(costs) - sum(costs[:N // 4]) // 2
+
+print(price2,price1)
 
 
