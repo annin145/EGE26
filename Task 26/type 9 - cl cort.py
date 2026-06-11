@@ -1,0 +1,1 @@
+with open(r'..\files\26_')
