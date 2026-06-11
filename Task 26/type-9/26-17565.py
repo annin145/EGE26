@@ -16,13 +16,15 @@ with open(r'..\files\26_17565.txt') as file:
         ID, ex1,ex2,ex3,interview = map(int,line.split())
         students.append([ex1+ex2+ex3, interview, ID])
 
-student = sorted(students, key=lambda x: (-x[0],-x[1],x[2]))
+students = sorted(students, key=lambda x: (-x[0],-x[1],x[2]))
 
 full_score_id = 0
 score = 0
 cnt_half_score = 0
 half_score = students[:S][-1][0]
+print(students[:S][0])
 if students[:S][-1][0] == students[S:][0][0]:
+
     cnt_half_score = sum(st[0] == students[:S][-1][0] for st in students)
     full_score_id = [st[2] for st in students if st[0] > half_score][-1]
 else:
