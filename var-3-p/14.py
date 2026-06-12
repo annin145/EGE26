@@ -5,14 +5,14 @@ def convert(num,sys):
         num //= sys
     return res[::-1]
 cnt = 0
-ans = 10*10
-for x in range(0,2031):
+ans = 10**10
+for x in range(1,2031):
     num = 6**2030 + 6**100 - x
     num = convert(num,6)
     for i in num:
-        if i == 0:
+        if i == '0':
             cnt +=1
-            ans = min(ans,cnt)
+    ans = min(ans,cnt)
 
 print(ans)
 
