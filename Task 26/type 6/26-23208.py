@@ -34,6 +34,6 @@ with open(r'..\files\26_23208.txt') as file:
             details.append([paint, 'p', num])
 
 details = sorted(details)
-cnt_g = sum(d[1]== 'g' for d in details[:-1])
+cnt_g = sum(d[1] == 'g' for d in details[:-1])
 print(details[-1][2], cnt_g)
 
